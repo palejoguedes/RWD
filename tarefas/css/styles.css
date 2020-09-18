@@ -31,7 +31,11 @@ body {
   max-width: 210px !important;
 }
 
-.goal {
+.goal-area {
+  width: 100%;
+}
+
+.goal-num {
   color: #262626;
 }
 

@@ -17,7 +17,6 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-navbar justify-content-between">
       <a class="navbar-brand" href="index.html"><img src="img/Logo_GO_branco.png" class="logo-go" alt="Logo Go!" /></a>
-
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link link-navbar" href="tarefas/index.html">Tarefas</a>
@@ -30,15 +29,26 @@
     <div class="row">
       <div class="col-2 score">
         <img src="img/termometro.svg" class="points-mark" alt="Marcação da pontuação" />
-        <h3 class="goal">500</h3>
-        <hr width="100%" style="border-top: 1px solid #262626">
-        <h3 class="goal">400</h3>
-        <hr width="100%" style="border-top: 1px solid #262626">
-        <h3 class="goal">300</h3>
-        <hr width="100%" style="border-top: 1px solid #262626">
-        <h3 class="goal">200</h3>
-        <hr width="100%" style="border-top: 1px solid #262626">
-        <h3 class="goal">100</h3>
+        <div id="recompensa5" data-toggle="popover" title="Título recompensa" data-content="Descrição recompensa..."
+          class="goal-area">
+          <h3 class="goal-num">500</h3>
+        </div>
+        <div id="recompensa4" data-toggle="popover" title="Título recompensa" data-content="Descrição recompensa..."
+          class="goal-area">
+          <h3 class="goal-num">400</h3>
+        </div>
+        <div id="recompensa3" data-toggle="popover" title="Título recompensa" data-content="Descrição recompensa..."
+          class="goal-area">
+          <h3 class="goal-num">300</h3>
+        </div>
+        <div id="recompensa2" data-toggle="popover" title="Título recompensa" data-content="Descrição recompensa..."
+          class="goal-area">
+          <h3 class="goal-num">200</h3>
+        </div>
+        <div id="recompensa1" data-toggle="popover" title="Título recompensa" data-content="Descrição recompensa..."
+          class="goal-area">
+          <h3 class="goal-num">100</h3>
+        </div>
       </div>
       <div class="col-10">
         <div class="list-cards">
@@ -81,7 +91,10 @@
   <!--Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

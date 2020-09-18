@@ -22,20 +22,26 @@ body {
 
 .score {
   height: calc(100vh - 106px);
-  background-color: #f0da22;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   position: relative;
-  max-width: 210px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  padding: 2em 0px !important;
+  max-width: 140px !important;
+  padding: 0px !important;
 }
 
-.goal {
-  color: #262626;
+.goal-area {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-num {
+  color: #f08322;
+  height: inherit;
 }
 
 .list-cards {
@@ -65,6 +71,7 @@ body {
 
 .bg-navbar {
   background-color: #262626;
+  padding: .5rem 3rem !important;
 }
 
 .logo-go {
@@ -78,6 +85,31 @@ body {
 
 .link-navbar:hover {
   color: #f0da22 !important;
+}
+
+
+#recompensa1 {
+  background-color: #eedf5e;
+}
+
+#recompensa2 {
+  background-color: #f2df41;
+
+}
+
+#recompensa3 {
+  background-color: #f0da22;
+
+}
+
+#recompensa4 {
+  background-color: #f0cc22;
+
+}
+
+#recompensa5 {
+  background-color: #f0bd22;
+
 }
 
 .points-mark {
@@ -315,10 +347,6 @@ footer {
 
   section {
     font-size: 0.8rem;
-  }
-
-  header {
-    height: 128px;
   }
 
   .lista-redes-sociais {
