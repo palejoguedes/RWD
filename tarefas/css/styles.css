@@ -29,9 +29,6 @@ body {
   align-items: center;
   position: relative;
   max-width: 210px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  padding: 2em 0px !important;
 }
 
 .goal {
@@ -77,6 +74,10 @@ body {
 }
 
 .link-navbar:hover {
+  color: #f0da22 !important;
+}
+
+.link-navbar.active {
   color: #f0da22 !important;
 }
 
