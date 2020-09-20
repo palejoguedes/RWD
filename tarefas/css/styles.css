@@ -3,11 +3,6 @@
   src: url("../layout/_fontes/Insignia.otf");
 }
 
-@font-face {
-  font-family: "Pixel";
-  src: url("../layout/_fontes/small_pixel.ttf");
-}
-
 body {
   font-family: Insignia, sans-serif;
 }
@@ -18,35 +13,26 @@ body {
   background: rgb(26, 59, 153);
   background: linear-gradient(0deg, rgba(26, 59, 153, 1) 0%, rgba(74, 134, 255, 1) 75%);
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.score {
+main {
   height: calc(100vh - 106px);
-  background-color: #f0da22;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-  max-width: 210px !important;
+  overflow-y: auto;
 }
 
-.goal-area {
-  width: 100%;
-}
-
-.goal-num {
-  color: #262626;
+main::-webkit-scrollbar {
+  display: none;
 }
 
 .list-cards {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
+
 
 .list-cards .card {
   margin: 0.8em;
@@ -62,6 +48,37 @@ body {
   bottom: 5vh;
   right: 5vh;
   z-index: 5;
+}
+
+.icone-chat {
+  width: 50px;
+}
+
+.card-tarefa {
+  background-color: transparent !important;
+  border: 1.5px SOLID #FFFFFF !important;
+  color: #ffffff !important;
+  max-width: 762px;
+}
+
+.card-tarefa-disabled {
+  border: 1.5px SOLID #262626 !important;
+  color: #262626 !important;
+
+}
+
+.card-link {
+  color: #f0da22;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-link:hover {
+  color: #f0bd22;
+}
+
+.card-link.disabled {
+  color: #262626;
 }
 
 .bg-navbar {
@@ -81,9 +98,48 @@ body {
   color: #f0da22 !important;
 }
 
-.link-navbar.active {
+.nav-link {
+  font-size: 1.3em;
+}
+
+.nav-link.active {
   color: #f0da22 !important;
 }
+
+
+.box-tarefa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #f0da22;
+  width: 80%;
+  max-width: 150px;
+  margin: .5em auto;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #f0da22;
+}
+
+.box-tarefa-disabled {
+  border: 1.5px SOLID #262626 !important;
+}
+
+.coroa {
+  position: absolute;
+  bottom: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 55px;
+}
+
+.coroa-3 {
+  width: 90px
+}
+
+
 
 .points-mark {
   position: absolute;
@@ -91,243 +147,21 @@ body {
   width: 130%;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 50px;
+.titulo-tarefas {
   color: #ffffff;
-  padding: 1.5em 0;
-  z-index: 3;
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
 
-.logo {
-  font-size: 3rem;
-  margin-left: 5vw;
-  font-family: Pixel, sans-serif;
-}
+/* INICIO DOS MEDIA QUERIES */
 
-.lista-menu {
-  margin-right: 5vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 20vw;
-}
+@media (min-width: 1300px) {
 
-.botao-menu {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.arrow-down {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6.66666666666666666666666667%;
-  width: 0;
-  height: 0;
-  border-left: 6vw solid transparent;
-  border-right: 6vw solid transparent;
-  z-index: 2;
-}
-
-.arrow-down-menu {
-  border-top: 3.3vw solid #262626;
-}
-
-.arrow-down-b2w,
-.arrow-down-equipe {
-  border-top: 3.3vw solid #ffffff;
-}
-
-.arrow-down-problema {
-  border-top: 3.3vw solid #fdd835;
-}
-
-.arrow-down-solucao {
-  border-top: 3.3vw solid #303f9f;
-}
-
-section {
-  width: 100%;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-}
-
-section p {
-  font-size: 1.2em;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.sec-b2w,
-.sec-equipe {
-  background-color: #ffffff;
-}
-
-.sec-b2w a {
-  color: #303f9f;
-}
-
-.sec-problema,
-.sec-contato {
-  background-color: #fdd835;
-}
-
-.sec-solucao {
-  background-color: #303f9f;
-  color: #ffffff;
-}
-
-.sec-equipe,
-.sec-contato {
-  padding: 5em 0;
-}
-
-.formulario-contato {
-  width: 50vw;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.formulario-contato input {
-  width: 100%;
-}
-
-.formulario-contato label {
-  text-align: left;
-}
-
-#mensagem {
-  height: 6em;
-}
-
-.botao-enviar {
-  background-color: #303f9f;
-  color: #ffffff;
-  margin: 0.5em 0;
-  padding: 0.5em;
-  border: 0;
-  border-radius: 2px;
-  min-height: 30px;
-  text-transform: uppercase;
-  font-family: Pixel, sans-serif;
-}
-
-.fotos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 70vw;
-}
-
-.integrante {
-  width: 170px;
-  margin: 2rem;
-}
-
-.integrante img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
-
-.integrante figcaption {
-  width: 100%;
-  text-align: center;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #262626;
-  width: 100%;
-  min-height: 80px;
-  padding: 2em 0;
-}
-
-.texto-rodape {
-  color: #ffffff;
-  width: 40vw;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.lista-redes-sociais {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lista-redes-sociais {
-  width: 25vw;
-  height: 50px;
-  margin-top: 1.5em;
-}
-
-.lista-redes-sociais li {
-  width: 50px;
-  height: 100%;
-  margin: 0.3em;
-}
-
-.lista-redes-sociais li a,
-.lista-redes-sociais li img {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 960px) {
-
-  .fotos,
-  .texto-rodape,
-  .formulario-contato {
-    width: 80vw;
+  .bg-navbar {
+    padding: .5rem 3rem !important;
   }
 
-  section {
-    padding: 4em 0;
-  }
-
-  .menu {
-    flex-direction: column;
-  }
-
-  .lista-menu {
-    width: 50vw;
-    min-width: 180px;
-    margin: 0.5em 0 0 0;
-  }
-
-  section {
-    font-size: 0.8rem;
-  }
-
-  header {
-    height: 128px;
-  }
-
-  .lista-redes-sociais {
-    width: 60vw;
-    min-width: 240px;
+  .icone-chat {
+    width: 70px;
   }
 }

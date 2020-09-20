@@ -20,4 +20,8 @@ $(function () {
     trigger: 'hover',
     placement: 'right'
   });
+  $('.chat-button').popover({
+    trigger: 'hover',
+    placement: 'top'
+  });
 })

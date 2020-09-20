@@ -3,11 +3,6 @@
   src: url("../layout/_fontes/Insignia.otf");
 }
 
-@font-face {
-  font-family: "Pixel";
-  src: url("../layout/_fontes/small_pixel.ttf");
-}
-
 body {
   font-family: Insignia, sans-serif;
 }
@@ -52,21 +47,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
-
-@media (min-width: 1300px) {
-  .list-cards {
-    justify-content: center;
-    height: 100%;
-  }
-
-  .bg-navbar {
-    padding: .5rem 3rem !important;
-  }
-
-  .icone-chat {
-    width: 70px;
-  }
 }
 
 .list-cards .card {
@@ -123,6 +103,10 @@ body {
   color: #f0da22 !important;
 }
 
+.nav-link {
+  font-size: 1.3em;
+}
+
 #recompensa1 {
   background-color: #eedf5e;
 }
@@ -177,4 +161,21 @@ body {
   position: absolute;
   top: 50%;
   width: 130%;
+}
+
+/* INICIO DOS MEDIA QUERIES */
+
+@media (min-width: 1300px) {
+  .list-cards {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .bg-navbar {
+    padding: .5rem 3rem !important;
+  }
+
+  .icone-chat {
+    width: 70px;
+  }
 }
