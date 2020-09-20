@@ -4,14 +4,14 @@
 }
 
 body {
-  font-family: Insignia, sans-serif;
-}
-
-
-body {
+  font-family: Insignia, sans-serif !important;
   height: 100vh;
   background: rgb(26, 59, 153);
-  background: linear-gradient(0deg, rgba(26, 59, 153, 1) 0%, rgba(74, 134, 255, 1) 75%);
+  background: linear-gradient(
+    0deg,
+    rgba(26, 59, 153, 1) 0%,
+    rgba(74, 134, 255, 1) 75%
+  );
   background-repeat: no-repeat;
 }
 
@@ -71,7 +71,7 @@ body {
 
 .card-tarefa {
   background-color: transparent !important;
-  border: 1.5px SOLID #FFFFFF !important;
+  border: 1.5px SOLID #ffffff !important;
   color: #ffffff !important;
   max-width: 762px;
 }
@@ -96,7 +96,7 @@ body {
 }
 
 .link-navbar {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .link-navbar:hover {
@@ -113,22 +113,18 @@ body {
 
 #recompensa2 {
   background-color: #f2df41;
-
 }
 
 #recompensa3 {
   background-color: #f0da22;
-
 }
 
 #recompensa4 {
   background-color: #f0cc22;
-
 }
 
 #recompensa5 {
   background-color: #f0bd22;
-
 }
 
 .box-tarefa {
@@ -139,7 +135,7 @@ body {
   border: 1.5px solid #f0da22;
   width: 80%;
   max-width: 150px;
-  margin: .5em auto;
+  margin: 0.5em auto;
   height: 100px;
   font-size: 2.5rem;
   font-weight: bold;
@@ -154,8 +150,6 @@ body {
   justify-content: space-between;
   width: 55px;
 }
-
-
 
 .points-mark {
   position: absolute;
@@ -172,7 +166,7 @@ body {
   }
 
   .bg-navbar {
-    padding: .5rem 3rem !important;
+    padding: 0.5rem 3rem !important;
   }
 
   .icone-chat {

@@ -1,14 +1,11 @@
 @font-face {
   font-family: Insignia;
-  src: url("../layout/_fontes/Insignia.otf");
-}
-
-body {
-  font-family: Insignia, sans-serif;
+  src: url("../../layout/_fontes/Insignia.otf");
 }
 
 
 body {
+  font-family: Insignia !important;
   height: 100vh;
   background: rgb(26, 59, 153);
   background: linear-gradient(0deg, rgba(26, 59, 153, 1) 0%, rgba(74, 134, 255, 1) 75%);
